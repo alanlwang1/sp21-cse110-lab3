@@ -16,11 +16,12 @@
                 <li><a href = "#040621">April 6th, 2021</a></li>
                 <li><a href = "#040521">April 5th, 2021</a></li>
             </ol>
+            <a href = "#form">New entry form</a>
         </nav>
         </header>
         <main>
         <hr id="040721">
-        <section >        
+        <section>        
             <h2><span>Journal Entry 3: April 7th, 2021</span></h2>
             <section>
                 <h3>Highlights: </h3>
@@ -34,15 +35,17 @@
                 <h3>To-do list: </h3>
                 <ul>
                     <li><strong>☐ Make vaccine appointment</strong></li>
-                    <li>☐ Finish CSE 110 lab assignment</li>
+                    <li>☑ Finish CSE 110 lab assignment</li>
                     <li>☐ Introduce myself to CSE 110 group members</li>
                     <li>☐ Look for houses for next year</li>
-
                 </ul>
             </section>
             <section>
                 <h3>Thoughts on the day:</h3>
                 <p>
+                Anyways uhm... I bought a <em>whole</em> bunch of shungite, rocks, do you know what shungite is? Anybody know what shungite is. No, not <em>Suge Knight</em>, I think hes locked up in prison. <br>
+                Talking <em>shungite</em>. Anyways, its a 2 billion year old like rock, stone that protects against frequencies and unwanted frequencies that may be traveling in the air.<br>
+                So thats my story. I bought a whole bunch of stuff, put them around the la casa. Little pyramids. Stuff like that.
                 </p>
             </section>
         </section>
@@ -53,7 +56,7 @@
                 <h3>Highlights: </h3>
                 <ul>
                     <li>Finished PHIL 120 assignments</li>
-                    <li>My house's fence is being painted<br>
+                    <li>My house's fence is being re-painted:<br>
                         <img src="fence.jpg" alt="fence" width=300 align=center></li>
                 </ul>
             </section>
@@ -107,12 +110,83 @@
                 </video>
             </section>
         </section>
-        <hr>
+        <hr id="form">
         </main>
         <footer>
-
+        <section> 
+            <h2>Create a new journal entry:</h2>
+            <form>
+                <fieldset>
+                    <legend><b>Entry date/title</b></legend>
+                        <label for=date>Enter entry date:</label>
+                        <input type="date" id="date" name="entry-date"
+                                value="YY-MM-DD"
+                                min="2021-01-01"
+                                required><br>
+                        <label>Add custom title?</label>
+                        <select id="title-select">
+                            <option value="False">No</option>
+                            <option value="True">Yes</option>
+                        </select><br>
+                        <label for=title>Enter entry title:</label>
+                        <input type="text" id="title" name="entry-title" readonly><br>
+                </fieldset>
+                <fieldset>
+                    <legend><b>Entry content</b></legend>
+                    <label>Include in entry:</label><br>
+                    <input type="checkbox" id="highlights" name="highlights"
+                    checked>
+                    <label for="highlights">Highlights</label><br>
+                    <input type="checkbox" id="todo" name="todo"
+                    checked>
+                    <label for="todo">To-do list update</label><br>
+                    <input type="checkbox" id="text" name="text">
+                    <label for="text">Text</label><br>
+                    <input type="checkbox" id="media" name="media"
+                    checked>
+                    <label for="media">Media</label><br>
+                </fieldset>
+                <fieldset>
+                    <legend><b>Highlights</b></legend>
+                    <textarea id="highlights-text" name="highlights-text"
+                    rows="5" cols="33">Enter highlights of your day here...
+                    </textarea>
+                </fieldset>
+                <fieldset>
+                    <legend><b>Update to-do list</b></legend>
+                    <label for=todo-input>Add to to-do-list:</label><br>
+                    <input list="todo-entries" id="todo-input" name="todo-input" /> 
+                    <datalist id="todo-entries">
+                        <option value="Make vaccine appointment">
+                        <option value="Introduce myself to CSE 110 group members">
+                        <option value="Look for houses for next year">
+                    </datalist>
+                </fieldset>
+                <fieldset disabled>
+                    <legend><b>Text</b></legend>
+                    <label for=title>Text title:</label>
+                    <input type="text" id="text-title" name="text-title"><br>
+                    <textarea id="text-entry" name="text-entry"
+                    rows="5" cols="33">Enter text here...
+                    </textarea>
+                </fieldset>
+                <fieldset>
+                    <legend><b>Media</b></legend>
+                    <label>Select media type:</label><br>
+                    <input type="radio" id="image" name="media=type" value="image"
+                    checked>
+                    <label for="image">Image</label><br>
+                    <input type="radio" id="audio" name="media=type" value="audio">
+                    <label for="image">Audio</label><br>
+                    <input type="radio" id="video" name="media=type" value="video">
+                    <label for="image">Video</label><br>
+                    <br>
+                    <label for=media-input>Upload media file:</label><br>
+                    <input type="file" id="media-input" name="media-input">
+                </fieldset>
+                <p><button>Submit</button></p><br>
+            </form>
+        </section>
         </footer>
-
-
     </body>
 </html>
