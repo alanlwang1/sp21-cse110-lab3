@@ -1,0 +1,30 @@
+html {
+   background-color:rgba(154, 203, 255, 0.5); /* set background color of entire page */
+}
+
+* { 
+    color: "black";  /* set default text color and font */ 
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+h1, h2, h3{
+    color: #003366; /* set default heading color and font */ 
+    font-family: 'Raleway', sans-serif;
+}
+
+.headerbar {   /* Configure bar containing top journal title */ 
+    background-color:  #003366;
+    position: fixed; /* set the headerbar to fixed position */
+    top: 0;         /* set headerbar to top of page */
+    width: 100%;    /* Full width */
+}
+
+.headerbar h1 { /* Configure text inside header bar */ 
+    color: #ffffff;
+    text-align: center;
+}
+
+nav {
+    margin-top: 6rem;
+}
