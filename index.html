@@ -22,6 +22,11 @@
         </header>
         <main class="journal">
         <hr id="040721">
+        <style>
+            strong {
+                color: #00b0ff; /* configure strong color */ 
+            }
+        </style>
         <section class="box">        
             <h2>Journal Entry 3: April 7th, 2021</h2>
             <div>
@@ -58,7 +63,8 @@
                 <ul>
                     <li>Finished PHIL 120 assignments</li>
                     <li>My house's fence is being re-painted:<br>
-                        <img src="media/fence.jpg" alt="fence" width=300></li>
+                        <img src="media/fence.jpg" alt="fence" width=300>
+                        <p>A picture of my fence</p></li>
                 </ul>
             </div>
             <div>
@@ -74,7 +80,7 @@
             <div>
                 <h3>A song I listened to today:</h3>
                 <details>
-                    <summary><b>ROY KNOX x Tim Beeren - Save Me (Feat. Svniivan) [NCS Release]</b></summary>
+                    <summary><span style="color:#0087bd;font-weight:bold;">ROY KNOX x Tim Beeren - Save Me (Feat. Svniivan) [NCS Release]</span></summary>
                     <audio
                         controls
                         src="media/saveme.mp3">
@@ -103,10 +109,10 @@
             </div>
             <div>
                 <h3>A <i>League of Legends</i> clip from today:</h3>
-                <video controls width=300>
-                    <source src="media/leagueplay.webm"
-                    type="video/webm">
-                </video>
+                    <video id="leaguevideo" controls>
+                        <source src="media/leagueplay.webm"
+                        type="video/webm">
+                    </video>
             </div>
         </section>
         <hr id="form">
