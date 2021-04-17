@@ -7,7 +7,6 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
-
 h1, h2, h3{
     color: #003366; /* set default heading color and font */ 
     font-family: 'Raleway', sans-serif;
@@ -25,6 +24,43 @@ h1, h2, h3{
     text-align: center;
 }
 
-nav {
-    margin-top: 6rem;
+.box { /* Configure generic text box class */ 
+    display: block; 
+    border-width: 5px;
+    border-style: solid;
+    border-color: hsl(210, 100%, 20%); 
+    border-radius: 1em;
+    margin: auto; 
+    padding: 1em; 
+    text-align: left;
+    background-color: #fafafa; 
+    width: 90em;
 }
+
+nav.box{ /* configure nav text box */ 
+    margin-top: 6em;
+    margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 30em;
+}
+
+a[href^="#"] { /* configure internal links */ 
+    color: #003366;
+}
+
+.journal { /* configure main journal flexbox */ 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-content: flex-start; 
+
+}
+
+hr { /* style section dividers to account for header bar so that links work correctly*/ 
+    position: relative;
+    bottom: 6em;
+}
+
+
