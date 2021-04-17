@@ -118,7 +118,7 @@
         <hr id="form">
         </main>
         <footer>
-        <section> 
+        <section id="entryform" class = "box"> 
             <h2>Create a new journal entry:</h2>
             <form>
                 <fieldset>
@@ -138,17 +138,28 @@
                 <fieldset>
                     <legend><b>Entry content</b></legend>
                     <label>Include in entry:</label><br>
-                    <input type="checkbox" id="highlights" name="highlights"
-                    checked>
-                    <label for="highlights">Highlights</label><br>
-                    <input type="checkbox" id="todo" name="todo"
-                    checked>
-                    <label for="todo">To-do list update</label><br>
-                    <input type="checkbox" id="text" name="text">
-                    <label for="text">Text</label><br>
-                    <input type="checkbox" id="media" name="media"
-                    checked>
-                    <label for="media">Media</label><br>
+                    <div id="entrycontent">
+                        <div>
+                            <input type="checkbox" id="highlights" name="highlights"
+                            checked>
+                            <label for="highlights">Highlights</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="todo" name="todo"
+                            checked>
+                            <label for="todo">To-do list update</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="text" name="text">
+                            <label for="text">Text</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="media" name="media"
+                            checked>
+                            <label for="media">Media</label>
+                        </div>
+
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend><b>Highlights</b></legend>
@@ -179,16 +190,16 @@
                     <label>Select media type:</label><br>
                     <input type="radio" id="image" name="media=type" value="image"
                     checked>
-                    <label for="image">Image</label><br>
+                    <label for="image">Image</label>
                     <input type="radio" id="audio" name="media=type" value="audio">
-                    <label for="image">Audio</label><br>
+                    <label for="image">Audio</label>
                     <input type="radio" id="video" name="media=type" value="video">
-                    <label for="image">Video</label><br>
+                    <label for="image">Video</label>
                     <br>
                     <label for=media-input>Upload media file:</label><br>
                     <input type="file" id="media-input" name="media-input">
                 </fieldset>
-                <p><button>Submit</button></p><br>
+                <button>Submit</button>
             </form>
         </section>
         </footer>

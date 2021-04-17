@@ -16,7 +16,7 @@ h1, h2, h3{
     background-color:  #003366;
     position: fixed; /* set the headerbar to fixed position */
     top: 0;         /* set headerbar to top of page */
-    width: 100%;    /* Full width */
+    width: 100vw;    /* Full width */
 }
 
 .headerbar h1 { /* Configure text inside header bar */ 
@@ -24,9 +24,9 @@ h1, h2, h3{
     text-align: center;
 }
 
-.box { /* Configure generic text box class */ 
+.box { /* Generic text box class */ 
     display: block; 
-    border-width: 5px;
+    border-width: 1.5mm;
     border-style: solid;
     border-color: hsl(210, 100%, 20%); 
     border-radius: 1em;
@@ -37,21 +37,25 @@ h1, h2, h3{
     width: 90em;
 }
 
-nav.box{ /* configure nav text box */ 
+nav.box{ /* set special margins/dimensions for nav text box */ 
     margin-top: 6em;
     margin-bottom: 1em;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 1em; 
     width: 30em;
 }
 
-a[href^="#"] { /* configure internal links */ 
+a[href^="#"] { /* format internal links */ 
     color: #003366;
     text-decoration: none; 
 }
 
-a[href^="#"]:hover { /* configure internal link behavior when hovered */
+a[href^="#"]:hover { /* remove underlines from internal links when hovered */
     text-decoration: underline;
 }
 
@@ -63,21 +67,74 @@ a[href^="#"]:hover { /* configure internal link behavior when hovered */
 
 }
 
-section > h2 { /* configure titles of journal entries */
+section > h2 { /* format titles of journal entries */
     color: black;
 }
 
-img + p { /* configure image captions */ 
+img + p { /* format image captions */ 
     font-style: italic; 
     margin: 0; 
     font-size: 14px;
 }
 
-#leaguevideo { /* configure league video properties */ 
+#leaguevideo { /* set margins/dimensions of league video */ 
     display: block;
     margin: auto;
     height: 30em;
 }
+
+#entryform.box { /* set width of bottom form box */ 
+    width: 110em;
+}
+
+form { /* configure form layout */ 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-content: flex-start; 
+    
+}
+
+fieldset ~ button { /* configure form button appearance */ 
+    background-color: white; 
+    margin-top: 1em;
+    width: 10em;
+    height: 5em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+fieldset ~ button:active { /* change button color on press */
+    background-color: black; 
+    color: white;
+}
+
+#entrycontent { /* configure grid for entry content choices */ 
+    display: grid;
+    grid-template-columns: 15em 15em; 
+    grid-template-rows: 1fr 1fr; 
+    justify-items: start;
+    align-items: start;
+}
+
+@media screen and (max-width: 600px) { /* change grid layout for smaller screens */ 
+    #entrycontent {  
+        display: grid;
+        grid-template-columns: 15em; 
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        justify-items: start;
+        align-items: start;
+    }
+}
+input[type="radio"] { /* set radio inputs to be inline */ 
+    display: inline;
+}
+
+textarea { /* set size of textarea */ 
+    width: 300pt;
+    height: 150pt;
+}
+
 hr { /* style section dividers to account for header bar so that links work correctly*/ 
     position: relative;
     bottom: 6rem;
