@@ -3,7 +3,7 @@ html {
 }
 
 * { 
-    color: "black";  /* set default text color and font */ 
+    color: black;  /* set default text color and font */ 
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -48,6 +48,11 @@ nav.box{ /* configure nav text box */
 
 a[href^="#"] { /* configure internal links */ 
     color: #003366;
+    text-decoration: none; 
+}
+
+a[href^="#"]:hover { /* configure internal link behavior when hovered */
+    text-decoration: underline;
 }
 
 .journal { /* configure main journal flexbox */ 
@@ -58,9 +63,24 @@ a[href^="#"] { /* configure internal links */
 
 }
 
+section > h2 { /* configure titles of journal entries */
+    color: black;
+}
+
+img + p { /* configure image captions */ 
+    font-style: italic; 
+    margin: 0; 
+    font-size: 14px;
+}
+
+#leaguevideo { /* configure league video properties */ 
+    display: block;
+    margin: auto;
+    height: 30em;
+}
 hr { /* style section dividers to account for header bar so that links work correctly*/ 
     position: relative;
-    bottom: 6em;
+    bottom: 6rem;
 }
 
 
